@@ -1,10 +1,3 @@
-const burger = document.getElementById("burger-menu");
-const nav = document.getElementById("nav-menu");
-
-burger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
 // Kalau kamu ingin menambahkan interaksi dropdown bahasa nantinya
 document.querySelector(".language-dropdown").addEventListener("click", function () {
   alert("Fitur pilih bahasa coming soon!");

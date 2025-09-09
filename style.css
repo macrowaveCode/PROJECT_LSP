@@ -59,29 +59,6 @@ section {
   height: 40px;
 }
 
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: var(--primary);
-}
-
-/* Burger Menu (Mobile) */
-.burger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
 .action-wrapper {
   display: flex;
   align-items: center;
