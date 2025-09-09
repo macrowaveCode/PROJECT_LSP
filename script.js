@@ -20,21 +20,6 @@ function scrollCarousel(direction, buttonElement) {
   });
 }
 
-// Sementara belum ada interaksi JS, bisa digunakan untuk animasi tambahan nanti
-console.log("Tentang Kami section loaded.");
-
-// Bisa dikembangkan jika ada interaksi (misal buka popup atau animasi scroll)
-console.log("Lokasi Kami section loaded");
-
-// Scroll saat tombol diklik
-document.getElementById("scroll-left").addEventListener("click", () => {
-  document.getElementById("logo-scroll").scrollBy({ left: -200, behavior: "smooth" });
-});
-
-document.getElementById("scroll-right").addEventListener("click", () => {
-  document.getElementById("logo-scroll").scrollBy({ left: 200, behavior: "smooth" });
-});
-
 function recaptchaSuccess(token) {
   if (typeof grecaptcha === "undefined") {
     alert("Sistem verifikasi belum siap. Silakan tunggu sebentar.");
