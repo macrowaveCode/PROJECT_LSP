@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - JWP E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form Registrasi -->
+<form id="registerForm">
+  <input type="text" placeholder="Nama / Username" required>
+  <input type="email" placeholder="Email" required>
+  <input type="password" placeholder="Password" required>
+  <input type="text" placeholder="No. HP" required>
+  <button type="submit">Daftar</button>
+</form>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    // Simulasi registrasi berhasil → langsung ke login
+    alert("Registrasi berhasil! Silakan login.");
+    window.location.href = "login.html";
+});
+</script>
+</body>
+</html>
+
+

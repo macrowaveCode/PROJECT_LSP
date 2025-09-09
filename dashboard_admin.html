@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="dashboard_admin.php?page=produk">Kelola Produk</a>
+    <a href="dashboard_admin.php?page=transaksi">Kelola Transaksi</a>
+    <a href="logout.php">Logout</a>
+  </nav>
+
+  <main class="dashboard-content">
+    <?php
+      if(isset($_GET['page']) && $_GET['page'] == 'transaksi') {
+        include 'admin_transaksi.php';
+      } else {
+        include 'admin_produk.php';
+      }
+    ?>
+  </main>
+</body>
+</html>

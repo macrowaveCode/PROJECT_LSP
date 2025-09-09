@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard User</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="dashboard_user.php">Home</a>
+    <a href="shop.php">Shop Now</a>
+    <a href="cart.php">Cart</a>
+    <a href="riwayat.php">Riwayat</a>
+    <a href="logout.php">Logout</a>
+  </nav>
+
+  <main class="dashboard-content">
+    <section id="home">
+      <h2>Selamat Datang, <?php echo $_SESSION['username']; ?>!</h2>
+      <div class="event-box">
+        <h3>Pengumuman Event</h3>
+        <p>Lomba Coding Anak Surabaya – Daftar Sekarang!</p>
+      </div>
+    </section>
+    <!-- Shop, Cart, Riwayat akan di-load masing-masing page -->
+  </main>
+</body>
+</html>

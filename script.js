@@ -1,31 +1,21 @@
-// Kalau kamu ingin menambahkan interaksi dropdown bahasa nantinya
-document.querySelector(".language-dropdown").addEventListener("click", function () {
-  alert("Fitur pilih bahasa coming soon!");
-});
+    // Ambil elemen
+    const btnLogin = document.getElementById("btn-login");
+    const btnRegister = document.getElementById("btn-register");
+    const modalLogin = document.getElementById("modal-login");
+    const modalRegister = document.getElementById("modal-register");
+    const closeLogin = document.getElementById("close-login");
+    const closeRegister = document.getElementById("close-register");
 
-function scrollCarousel(direction, buttonElement) {
-  const carousel = buttonElement.closest(".carousel-section, .carousel-section2").querySelector(".carousel");
-  const scrollAmount = 420;
+    // Buka modal
+    btnLogin.onclick = () => modalLogin.style.display = "block";
+    btnRegister.onclick = () => modalRegister.style.display = "block";
 
-  carousel.scrollBy({
-    left: direction * scrollAmount,
-    behavior: "smooth",
-  });
-}
+    // Tutup modal
+    closeLogin.onclick = () => modalLogin.style.display = "none";
+    closeRegister.onclick = () => modalRegister.style.display = "none";
 
-function recaptchaSuccess(token) {
-  if (typeof grecaptcha === "undefined") {
-    alert("Sistem verifikasi belum siap. Silakan tunggu sebentar.");
-    return;
-  }
-
-  const recaptchaToken = grecaptcha.getResponse();
-  if (!recaptchaToken) {
-    alert("Verifikasi gagal. Silakan coba lagi.");
-    grecaptcha.reset();
-    return;
-  }
-
-  console.log("✅ reCAPTCHA lolos dengan token:", recaptchaToken);
-  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScqQ8K7VIOHHrBt7xqLJTwUvPbHszeYotZEOp1HJLsYxpKJBA/viewform";
-}
+    // Tutup klik di luar modal
+    window.onclick = (e) => {
+      if(e.target == modalLogin) modalLogin.style.display = "none";
+      if(e.target == modalRegister) modalRegister.style.display = "none";
+    }

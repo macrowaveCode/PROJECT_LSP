@@ -6,39 +6,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header-wrapper">
-      <header class="header">
-        <!-- Logo -->
-        <div class="logo-container">
-          <img src="assets/logo-codekids.png" alt="Logo CodeKids Surabaya" class="logo" />
-        </div>
-
-        <!-- CTA -->
-        <div class="action-wrapper">
-          <a href="https://forms.gle/xxxxxx" class="cta-button">Daftar Trial Gratis</a>
-        </div>
-      </header>
+    <header class="header-wrapper">
+    <div class="header">
+      <div class="logo-container">
+        <img src="assets/logo-codekids.png" alt="Logo" class="logo">
+      </div>
+      <div class="action-wrapper">
+        <button class="cta-button" id="btn-register">Register</button>
+        <button class="cta-button cta-login" id="btn-login">Login</button>
+      </div>
     </div>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="beranda">
-      <div class="hero-text">
-        <h1>
-          Belajar <span class="highlight">Coding Seru</span><br />
-          Untuk Anak Surabaya<br />
-          Bersama <span class="highlight">CodeKids</span>
-        </h1>
-        <p>
-          Program belajar coding interaktif untuk anak usia 5–15 tahun.<br />
-          Bangun kreativitas dan logika sejak dini!
-        </p>
-        <button class="cta-button">Coba Trial Gratis!</button>
-      </div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Belajar <span class="highlight">Coding Seru</span> Bersama <span class="highlight">CodeKids</span></h1>
+      <p>Program belajar coding interaktif untuk anak usia 5–15 tahun.</p>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-mascot.png" alt="Maskot" class="maskot">
+    </div>
+  </section>
 
-      <div class="hero-image">
-        <img src="assets/hero-mascot.png" alt="Maskot CodeKids" class="maskot" />
-      </div>
-    </section>
+  <!-- Modal Login -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-login">&times;</span>
+      <h2>Login</h2>
+      <form action="login_process.php" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Register -->
+  <div id="modal-register" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-register">&times;</span>
+      <h2>Register</h2>
+      <form action="register_process.php" method="POST">
+        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="text" name="no_hp" placeholder="No. HP" required>
+        <button type="submit">Daftar</button>
+      </form>
+    </div>
+  </div>
 
     <footer class="footer">
       <div class="footer-container">
