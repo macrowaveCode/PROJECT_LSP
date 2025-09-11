@@ -11,15 +11,16 @@ if (isset($_POST['login'])) {
     $row = mysqli_fetch_assoc($result);
 
     if ($row) {
-        $_SESSION['id']       = $row['id'];
+        $_SESSION['user_id']  = $row['id'];   // ganti id → user_id
         $_SESSION['username'] = $row['username'];
-        $_SESSION['role']     = $row['role']; // ✅ pakai "=" bukan "=="
+        $_SESSION['role']     = $row['role'];
+
 
         if ($row['role'] == 'admin') {
-            header("Location: dashboard_admin.php");
+            header("Location: admin/dashboard_admin.php");
             exit;
         } else {
-            header("Location: dashboard_user.php");
+            header("Location: user/dashboard_user.php");
             exit;
         }
     } else {
