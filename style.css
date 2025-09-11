@@ -303,3 +303,69 @@ section {
   max-width: 100%;
   border-radius: 5px;
 }
+
+/* ================= AUTH PAGES (Login & Register) ================= */
+.login-container,
+.register-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.login-container h2,
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-family: "Baloo 2", cursive;
+}
+
+.login-container input,
+.register-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-container button,
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+  background: #ff6500;
+}
+
+.login-container p,
+.register-container p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-container a,
+.register-container a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-container a:hover,
+.register-container a:hover {
+  text-decoration: underline;
+}

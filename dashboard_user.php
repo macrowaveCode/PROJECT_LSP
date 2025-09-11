@@ -2,12 +2,13 @@
 session_start();
 include 'config.php';
 
-if(!isset($_SESSION['user_id']) || $_SESSION['role'] != 'user'){
-    header("Location: index.html");
+// cek apakah sudah login dan role user
+if(!isset($_SESSION['id']) || $_SESSION['role'] != 'user'){
+    header("Location: login.php");
     exit;
 }
 
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['id'];
 $username = $_SESSION['username'];
 ?>
 
