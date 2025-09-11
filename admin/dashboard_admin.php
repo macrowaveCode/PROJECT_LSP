@@ -49,7 +49,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
       <div class="card">
         <h3>💳 Kelola Transaksi</h3>
         <p>Melihat daftar transaksi user.</p>
-        <a href="manage_transactions.php" class="btn">Kelola Transaksi</a>
+        <a href="kelola_transaksi.php" class="btn">Kelola Transaksi</a>
       </div>
     </div>
   </div>

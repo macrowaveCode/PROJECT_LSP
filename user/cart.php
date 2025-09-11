@@ -83,7 +83,7 @@ $result = mysqli_query($conn, "SELECT cart.id AS cart_id, products.id AS product
     <div class="topnav">
     <a href="dashboard_user.php">⬅ Kembali ke Home</a>
     <span>Hai, <?php echo $_SESSION['username']; ?></span>
-    <a href="index.php" onclick="return confirm('Yakin mau keluar?');">Logout</a>
+    <a href="../logout.php" onclick="return confirm('Yakin mau keluar?');">Logout</a>
     </div>
 
 
