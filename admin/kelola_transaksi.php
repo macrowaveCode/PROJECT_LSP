@@ -21,18 +21,19 @@ $result = mysqli_query($conn, $query);
 <head>
     <title>Kelola Transaksi</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
-        h2 { color: #333; }
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f8ff; }
+        h2 { color: #007BFF; }
         a { text-decoration: none; color: #007BFF; }
-        a:hover { text-decoration: underline; }
+        a:hover { color: #FFA500; text-decoration: underline; }
         .container { max-width: 1000px; margin: auto; }
-        table { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; border-top: 5px solid #FFA500; border-radius: 8px; overflow: hidden; }
         th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
         th { background: #007BFF; color: white; }
-        button { background: #28a745; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #218838; }
+        button { background: #FFA500; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition:0.3s; font-weight:600; }
+        button:hover { background: #ff8c00; }
         .topnav { margin-bottom: 20px; }
-        .topnav a { margin-right: 20px; }
+        .topnav a { margin-right: 20px; font-weight:600; }
+        .topnav a:hover { color: #FFA500; }
     </style>
 </head>
 <body>

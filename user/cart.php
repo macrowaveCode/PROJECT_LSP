@@ -62,32 +62,42 @@ $result = mysqli_query($conn, "SELECT cart.id AS cart_id, products.id AS product
     <meta charset="UTF-8">
     <title>Keranjang Belanja</title>
     <style>
-        body { font-family: Arial, sans-serif; margin:20px; background:#f7f7f7; }
-        h2 { color:#333; }
-        table { width:100%; border-collapse: collapse; background:white; }
+        body { font-family: 'Baloo 2', cursive; margin:20px; background:#f0f8ff; color:#333; }
+
+        /* Topnav */
+        .topnav { margin-bottom:20px; }
+        .topnav a { margin-right:20px; text-decoration:none; color:#007BFF; font-weight:600; }
+        .topnav a:hover { color:#FFA500; text-decoration:underline; }
+
+        /* Table */
+        table { width:100%; border-collapse: collapse; background:white; border-radius:8px; overflow:hidden; }
         th, td { padding:12px; border-bottom:1px solid #ddd; text-align:center; }
         th { background:#007BFF; color:white; }
-        img { width:80px; border-radius:6px; }
-        input[type=number] { width:60px; }
-        button { padding:6px 12px; background:#28a745; color:white; border:none; border-radius:4px; cursor:pointer; }
-        button:hover { background:#218838; }
-        .delete-btn { background:red; }
-        .delete-btn:hover { background:#a00; }
-        .total { font-weight:bold; font-size:18px; }
-        .topnav { margin-bottom:20px; }
-        .topnav a { margin-right:20px; text-decoration:none; color:#007BFF; }
-        .topnav a:hover { text-decoration:underline; }
+        img { width:80px; border-radius:8px; }
+
+        input[type=number] { width:60px; padding:4px; border:1px solid #ccc; border-radius:6px; }
+
+        /* Buttons */
+        button { padding:6px 12px; background:#007BFF; color:white; border:none; border-radius:6px; cursor:pointer; font-weight:600; transition:0.3s; }
+        button:hover { background:#0056b3; }
+
+        .delete-btn { background:#FFA500; color:white; padding:6px 10px; border-radius:6px; }
+        .delete-btn:hover { background:#ff8c00; }
+
+        .total { font-weight:bold; font-size:18px; color:#007BFF; }
+
+        /* Form select */
+        select { padding:6px 10px; border-radius:6px; border:1px solid #ccc; }
     </style>
 </head>
 <body>
     <div class="topnav">
-    <a href="dashboard_user.php">⬅ Kembali ke Home</a>
-    <span>Hai, <?php echo $_SESSION['username']; ?></span>
-    <a href="../logout.php" onclick="return confirm('Yakin mau keluar?');">Logout</a>
+        <a href="dashboard_user.php">⬅ Kembali ke Home</a>
+        <span>Hai, <?php echo $_SESSION['username']; ?></span>
+        <a href="../logout.php" onclick="return confirm('Yakin mau keluar?');">Logout</a>
     </div>
 
-
-    <h2>Keranjang Belanja</h2>
+    <h2 style="color:#007BFF;">Keranjang Belanja</h2>
 
     <form method="POST" action="cart.php">
         <table>
@@ -138,6 +148,5 @@ $result = mysqli_query($conn, "SELECT cart.id AS cart_id, products.id AS product
         <br><br>
         <button type="submit">Checkout</button>
     </form>
-
 </body>
 </html>

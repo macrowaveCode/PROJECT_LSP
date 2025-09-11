@@ -52,20 +52,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <meta charset="UTF-8">
 <title>Checkout - Faktur Pesanan</title>
 <style>
-    body { font-family: Arial, sans-serif; margin:20px; background:#f7f7f7; }
-    h2, h3 { color:#333; }
-    .container { max-width: 900px; margin:auto; }
-    .order-info { background:white; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+    body { font-family: 'Baloo 2', cursive; margin:20px; background:#f0f8ff; color:#333; }
+    h2 { color:#007BFF; }
+    h3 { color:#FF8C00; }
+
+    .container { max-width:900px; margin:auto; }
+    .order-info { background:white; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+    .order-info p { margin:5px 0; }
+
     .products { display:flex; flex-direction:column; gap:15px; margin-bottom:20px; }
-    .product-card { display:flex; gap:15px; background:white; padding:15px; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.1); align-items:center; }
-    .product-card img { width:80px; height:80px; object-fit:cover; border-radius:6px; }
+    .product-card { display:flex; gap:15px; background:white; padding:15px; border-radius:10px; box-shadow:0 1px 5px rgba(0,0,0,0.1); align-items:center; transition:0.3s; }
+    .product-card:hover { transform: translateY(-3px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+
+    .product-card img { width:80px; height:80px; object-fit:cover; border-radius:8px; }
     .product-details { flex:1; }
-    .product-details h4 { margin:0 0 5px; }
+    .product-details h4 { margin:0 0 5px; color:#007BFF; }
     .product-details p { margin:2px 0; color:#555; }
-    .subtotal { font-weight:bold; }
-    .total-section { text-align:right; margin-top:20px; font-size:18px; font-weight:bold; }
-    .btn { display:inline-block; padding:10px 15px; background:#28a745; color:white; border-radius:5px; text-decoration:none; margin-top:20px; }
-    .btn:hover { background:#218838; }
+    .subtotal { font-weight:bold; color:#FF8C00; }
+
+    .total-section { text-align:right; margin-top:20px; font-size:20px; font-weight:bold; color:#007BFF; }
+
+    .btn { display:inline-block; padding:10px 15px; border-radius:6px; text-decoration:none; margin-top:20px; font-weight:600; transition:0.3s; }
+    .btn-primary { background:#007BFF; color:white; }
+    .btn-primary:hover { background:#0056b3; }
+    .btn-success { background:#28a745; color:white; }
+    .btn-success:hover { background:#218838; }
 </style>
 </head>
 <body>
@@ -100,8 +111,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         Total Pesanan: Rp <?php echo number_format($total_price); ?>
     </div>
 
-    <a href="dashboard_user.php" class="btn">Kembali ke Dashboard</a>
-    <a href="invoice.php?order_id=<?php echo $order_id; ?>" class="btn" style="background:#007BFF;">Faktur</a>
+    <a href="dashboard_user.php" class="btn btn-success">Kembali ke Dashboard</a>
+    <a href="invoice.php?order_id=<?php echo $order_id; ?>" class="btn btn-primary">Faktur</a>
 </div>
 </body>
 </html>

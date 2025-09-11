@@ -89,30 +89,33 @@ if(isset($_GET['edit_id'])){
 <head>
     <title>Kelola Produk</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
-        h2 { color: #333; }
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f8ff; }
+        h2 { color: #007BFF; }
         a { text-decoration: none; color: #007BFF; }
-        a:hover { text-decoration: underline; }
+        a:hover { color: #FFA500; text-decoration: underline; }
         .container { max-width: 900px; margin: auto; }
         .form-box, .list-box {
             background: white; padding: 20px; margin-bottom: 20px;
             border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-top: 5px solid #FFA500;
         }
-        label { font-weight: bold; display: block; margin-top: 10px; }
+        label { font-weight: bold; display: block; margin-top: 10px; color: #007BFF; }
         input[type=text], input[type=number], textarea, input[type=file] {
             width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;
         }
         button {
-            background: #28a745; color: white; border: none; padding: 10px 15px;
-            border-radius: 4px; margin-top: 10px; cursor: pointer;
+            background: #FFA500; color: white; border: none; padding: 10px 15px;
+            border-radius: 4px; margin-top: 10px; cursor: pointer; font-weight: 600; transition:0.3s;
         }
-        button:hover { background: #218838; }
+        button:hover { background: #ff8c00; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
         th { background: #007BFF; color: white; }
         img { border-radius: 6px; }
-        .actions a { margin-right: 10px; }
+        .actions a { margin-right: 10px; color: #007BFF; font-weight: 600; }
+        .actions a:hover { color: #FFA500; }
         .delete { color: red; }
+        .delete:hover { color: darkred; }
     </style>
 </head>
 <body>
