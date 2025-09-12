@@ -1,6 +1,6 @@
 <?php
 $host = "127.0.0.1";   // bisa juga "localhost"
-$port = 3307;          // default MAMP
+$port = 8889;          // default MAMP
 $user = "root";
 $pass = "root";        // default MAMP
 $db   = "jwp_ecom";
