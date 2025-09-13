@@ -65,7 +65,7 @@ $result = mysqli_query($conn, "SELECT * FROM products");
     <div class="shop-grid">
       <?php while ($row = mysqli_fetch_assoc($result)) { ?>
         <div class="product-card">
-          <img src="../uploads/<?php echo $row['gambar']; ?>" alt="<?php echo $row['nama']; ?>">
+          <img src="../admin/uploads/<?php echo $row['gambar']; ?>" alt="<?php echo $row['nama']; ?>">
           <h4><?php echo $row['nama']; ?></h4>
           <p><?php echo $row['deskripsi']; ?></p>
           <p><strong>Rp <?php echo number_format($row['harga']); ?></strong></p>

@@ -94,7 +94,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $subtotal = $item['harga'] * $item['jumlah'];
         ?>
         <div class="product-card">
-            <img src="../uploads/<?php echo $item['gambar']; ?>" alt="<?php echo $item['nama']; ?>">
+            <img src="../admin/uploads/<?php echo $item['gambar']; ?>" alt="<?php echo $item['nama']; ?>">
             <div class="product-details">
                 <h4><?php echo $item['nama']; ?></h4>
                 <p>Harga: Rp <?php echo number_format($item['harga']); ?></p>

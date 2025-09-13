@@ -116,7 +116,7 @@ $result = mysqli_query($conn, "SELECT cart.id AS cart_id, products.id AS product
                 $total += $subtotal;
             ?>
             <tr>
-                <td><img src="../uploads/<?php echo $row['gambar']; ?>" alt="<?php echo $row['nama']; ?>"></td>
+                <td><img src="../admin/uploads/<?php echo $row['gambar']; ?>" alt="<?php echo $row['nama']; ?>"></td>
                 <td><?php echo $row['nama']; ?></td>
                 <td>Rp <?php echo number_format($row['harga']); ?></td>
                 <td>
